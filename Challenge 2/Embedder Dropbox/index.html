@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedder Dropbox Challenge - JAFP</title>
+    <script
+      type="text/javascript"
+      src="https://www.dropbox.com/static/api/2/dropins.js"
+      id="dropboxjs"
+      data-app-key="uzdo3p6h5notyy9"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="element"></div>
+    </div>
+    <script>
+      var options = {
+        // Shared link to Dropbox file
+        link: "https://www.dropbox.com/sh/keptcjl08q3wsid/AACui966iXcXPbagCJ2py2L-a?dl=0",
+        file: {
+          // Sets the zoom mode for embedded files. Defaults to 'best'.
+          zoom: "best", // or "fit"
+        },
+        folder: {
+          // Sets the view mode for embedded folders. Defaults to 'list'.
+          view: "list", // or "grid"
+          headerSize: "normal", // or "small"
+        },
+      };
+      Dropbox.embed(options, element);
+    </script>
+  </body>
+</html>
